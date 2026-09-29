@@ -3,9 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><!-- TEST : retirer cette ligne à la mise en ligne définitive -->
 <title>Compagnie ¿Por Qué No?</title>
-<meta name="description" content="Compagnie ¿Por Qué No? : création musicale, concerts, radio sociale et stages. Association loi 1901 basée à Montreuil.">
+<meta name="description" content="Compagnie ¿Por Qué No? : création musicale, concerts, label, radio sociale et stages. Association loi 1901 basée à Montreuil.">
 <link rel="icon" href="assets/logo-pqn.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,14 +47,6 @@
   .eyebrow{font-size:.74rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin:0 0 .9rem}
   .muted{color:var(--muted)}
 
-  /* Brouillon : retirer class="draft" du <body> avant publication */
-  .draft-banner{display:none}
-  body.draft .draft-banner{display:block; background:var(--accent); color:#fff; text-align:center;
-    font-size:.8rem; padding:.45rem 1rem; font-weight:600}
-  body.draft .mot::after{content:"à valider par la personne"; display:inline-block; margin-left:.6rem;
-    font:600 .66rem/1 var(--sans); letter-spacing:.08em; text-transform:uppercase;
-    color:var(--accent-ink); border:1px solid currentColor; border-radius:99px; padding:.2rem .5rem; vertical-align:middle}
-
   /* En-tête */
   header.top{position:sticky; top:0; z-index:20; background:color-mix(in srgb,var(--bg) 92%,transparent);
     backdrop-filter:saturate(180%) blur(10px); border-bottom:1px solid var(--line)}
@@ -82,23 +73,15 @@
   section h2{font-size:clamp(1.7rem,4vw,2.5rem); font-weight:800; letter-spacing:-.015em; margin-bottom:1rem}
   .intro{max-width:40rem; font-size:1.12rem}
 
-  /* Valeurs */
-  .values{list-style:none; margin:2.25rem 0 0; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0}
-  .values li{padding:1.4rem 1.6rem 1.6rem 0; margin:0; border-top:1px solid var(--line)}
-  .values b{display:block; font-family:var(--serif); font-size:1.15rem; font-weight:600; margin-bottom:.35rem; line-height:1.2}
-  .values span{color:var(--muted); font-size:.98rem; line-height:1.55; display:block}
-  .values .n{font:600 .74rem/1 var(--sans); letter-spacing:.14em; color:var(--accent); margin-bottom:.7rem}
-  @media (max-width:860px){.values{grid-template-columns:repeat(2,minmax(0,1fr))}}
-  @media (max-width:560px){.values{grid-template-columns:1fr}.values li{padding-right:0}}
+  /* Texte de clôture (compagnie) */
+  .closing{margin:3rem 0 0; padding-top:2rem; border-top:1px solid var(--line); max-width:40rem; font-family:var(--serif); font-size:clamp(1.1rem,2.1vw,1.3rem); line-height:1.5}
+  .closing .tagline{margin:1.5rem 0 0; font-weight:800; font-size:clamp(1.3rem,3vw,1.75rem); color:var(--accent-ink)}
 
-  /* Mot de la direction */
-  .pull{margin:3rem 0 0; display:grid; grid-template-columns:minmax(0,14rem) minmax(0,1fr); gap:clamp(1.25rem,4vw,3rem);
-    padding-top:2rem; border-top:1px solid var(--line)}
-  .pull .who h3{font-size:1.3rem; font-weight:800; margin-bottom:.3rem}
-  .pull .who p{font-size:.88rem; color:var(--muted); margin:0}
-  .pull blockquote{margin:0; font-family:var(--serif); font-size:clamp(1.15rem,2.2vw,1.4rem); line-height:1.45; font-weight:400}
-  .pull blockquote p{margin:0 0 .9rem}
-  @media (max-width:640px){.pull{grid-template-columns:1fr}}
+  /* Concerts : cycles et festivals */
+  .cycles{list-style:none; margin:1.5rem 0 0; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(14rem,1fr)); gap:1.5rem}
+  .cycles li{padding:1.25rem 0 0; border-top:1px solid var(--line)}
+  .cycles h4{font-size:1.05rem; font-weight:800; margin-bottom:.4rem}
+  .cycles p{font-size:.92rem; color:var(--muted); margin:0}
 
   /* Trois activités */
   .activities .row{display:grid; grid-template-columns:minmax(0,15rem) minmax(0,1fr); gap:clamp(1.25rem,4vw,3.5rem);
@@ -109,6 +92,15 @@
   .activities ul{margin:.25rem 0 1.1rem; padding-left:1.15rem}
   .activities li{margin:.3rem 0}
   @media (max-width:700px){.activities .row{grid-template-columns:1fr; gap:.7rem}}
+
+  /* Discographie du label */
+  .label-grid{list-style:none; margin:2rem 0 0; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr)); gap:1.75rem 1.1rem}
+  .label-grid li{display:flex; flex-direction:column; gap:.15rem}
+  .label-grid img{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:.4rem; border:1px solid var(--line); margin-bottom:.5rem; background:var(--card)}
+  .label-grid .what{font-weight:700; font-size:.94rem; line-height:1.3}
+  .label-grid .fmt{font-size:.68rem; font-weight:600; color:var(--muted); border:1px solid var(--line); border-radius:99px; padding:.02rem .4rem; margin-left:.35rem; vertical-align:middle}
+  .label-grid .who{color:var(--muted); font-size:.84rem}
+  .label-grid .y{font-size:.72rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--accent-ink); margin-top:.1rem}
 
   .btn{display:inline-block; font-weight:600; font-size:.92rem; text-decoration:none; background:var(--accent);
     color:#fff; padding:.75rem 1.2rem; border-radius:.45rem}
@@ -132,14 +124,13 @@
   @media (max-width:760px){.band .grid{grid-template-columns:1fr}}
 
   /* Équipe */
-  .group{margin-top:3rem}
+  .group{margin-top:2.75rem}
   .group h3{font-size:.76rem; font-family:var(--sans); font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
     padding-bottom:.7rem; border-bottom:1px solid var(--line); margin-bottom:0}
-  .person{display:grid; grid-template-columns:minmax(0,15rem) minmax(0,1fr); gap:clamp(1rem,4vw,3rem); padding:1.5rem 0; border-bottom:1px solid var(--line)}
-  .person h4{font-size:1.2rem; font-weight:800}
-  .person .role{font-size:.88rem; color:var(--accent-ink); margin:.25rem 0 0; font-weight:500}
-  .person .mot{margin:0; font-family:var(--serif); font-size:1.08rem; line-height:1.5; font-style:italic}
-  @media (max-width:640px){.person{grid-template-columns:1fr; gap:.6rem}}
+  .team{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(13rem,1fr)); gap:0}
+  .team li{padding:1.1rem 1.5rem 1.1rem 0; border-bottom:1px solid var(--line)}
+  .team h4{font-size:1.05rem; font-weight:800}
+  .team .role{font-size:.86rem; color:var(--accent-ink); margin:.2rem 0 0; font-weight:500}
 
   /* Collaborations : franche de logos */
   .collab{padding-top:clamp(2.5rem,6vw,4rem)}
@@ -150,6 +141,12 @@
   .logos span{display:none; font-family:var(--serif); font-weight:600; font-size:.95rem; line-height:1.2; color:#191715}
   .logos li.nologo img{display:none}
   .logos li.nologo span{display:block}
+
+  /* Faire un don */
+  .don{background:var(--card)}
+  .don .grid{display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:clamp(1.5rem,5vw,4rem); align-items:center}
+  .don .btn{margin-top:.5rem}
+  @media (max-width:760px){.don .grid{grid-template-columns:1fr}}
 
   /* Newsletter */
   .news{background:var(--card)}
@@ -179,8 +176,7 @@
 </style>
 </head>
 
-<body class="draft">
-<div class="draft-banner">BROUILLON : textes de l'équipe à faire valider avant mise en ligne (retirer class="draft" du &lt;body&gt;)</div>
+<body>
 
 <header class="top">
   <div class="wrap">
@@ -190,9 +186,12 @@
     </a>
     <nav class="links" aria-label="Navigation principale">
       <a href="#compagnie">La compagnie</a>
-      <a href="#activites">Activités</a>
-      <a href="#radio">Radio</a>
       <a href="#equipe">L'équipe</a>
+      <a href="#radio">Radio Mobile Paris</a>
+      <a href="#stages">Stages</a>
+      <a href="#concerts">Concerts</a>
+      <a href="#label">Label</a>
+      <a href="#don">Don</a>
       <a href="#newsletter">Newsletter</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -208,7 +207,7 @@
     <div>
       <p class="eyebrow">Compagnie de création musicale · Montreuil · depuis 2015</p>
       <h1>La musique comme lieu de <em>rencontre.</em></h1>
-      <p class="lede">La Compagnie ¿Por Qué No? crée, produit et fait circuler des projets musicaux, et les inscrit là où vivent les gens : sur scène, dans les territoires, auprès de celles et ceux que l'offre culturelle atteint le moins.</p>
+      <p class="lede">La Compagnie ¿Por Qué No? crée, produit et fait circuler des projets musicaux, pour un art qui s'inscrit dans le territoire et qui sort à la rencontre du social.</p>
     </div>
   </div>
 </div>
@@ -217,63 +216,57 @@
 <section id="compagnie">
   <div class="wrap">
     <p class="eyebrow">La compagnie</p>
-    <h2>Ce qui nous guide</h2>
-    <p class="intro">Nous sommes une association loi 1901. Nos statuts posent six intentions, que nous essayons de tenir dans chaque projet, du concert le plus intime à l'émission de radio en pleine rue.</p>
-
-    <ol class="values">
-      <li><div class="n">01</div><b>Créer, chercher, expérimenter</b><span>Contribuer au développement de créations ancrées dans la musique, de la recherche jusqu'à la diffusion.</span></li>
-      <li><div class="n">02</div><b>S'ancrer dans les territoires</b><span>Faire vivre chaque création là où elle naît, avec les acteurs culturels, sociaux, éducatifs et citoyens qui la composent.</span></li>
-      <li><div class="n">03</div><b>Faire ensemble</b><span>Encourager les démarches collectives et collaboratives, porteuses de transformation sociale.</span></li>
-      <li><div class="n">04</div><b>Ouvrir l'écoute</b><span>Favoriser l'accès à la pratique, à l'écoute et à la transmission de la musique, auprès de publics éloignés de l'offre culturelle.</span></li>
-      <li><div class="n">05</div><b>Créer des passerelles</b><span>Relier des scènes musicales, artistiques et non artistiques, pour ouvrir des espaces de dialogue et de coopération.</span></li>
-      <li><div class="n">06</div><b>Émanciper</b><span>Défendre la création comme espace d'expression et de participation, pour une plus grande diversité de voix, de récits et de sensibilités.</span></li>
-    </ol>
-
-    <div class="pull">
-      <div class="who">
-        <h3>Pablo Murgier Pazdera</h3>
-        <p>Directeur artistique<br>Pianiste et compositeur</p>
-      </div>
-      <blockquote class="mot">
-        <p>« La compagnie est née d'une conviction simple : la musique se fait à plusieurs, et elle vaut surtout par ce qu'elle rend possible entre les gens. Je dirige et je coordonne ses activités artistiques, des concerts à la radio, des stages aux créations.</p>
-        <p>Notre nom pose la question qui nous tient : ¿por qué no ? Pourquoi ne pas faire de la musique un lieu de rencontre, y compris pour celles et ceux que l'on n'invite jamais ? »</p>
+    <div class="closing" style="margin-top:0; padding-top:0; border-top:0">
+      <blockquote style="margin:0 0 1.25rem; padding-left:1.1rem; border-left:2px solid var(--line); font-style:italic; color:var(--muted)">
+        <p style="margin:0 0 .6rem">« Contribuer au développement de créations artistiques ancrées dans la musique, en favorisant les pratiques de recherche, d'expérimentation, de création et de diffusion ;</p>
+        <p style="margin:0">Inscrire ces créations dans les territoires où elles prennent forme, en articulant leur développement avec les différents acteurs culturels, sociaux, éducatifs et citoyens qui les composent. »</p>
       </blockquote>
+      <p><a href="statuts.html">Lire les statuts →</a></p>
+      <p class="tagline">L'art comme outil d'émancipation.</p>
     </div>
   </div>
 </section>
 
-<!-- NOS ACTIVITÉS -->
-<section id="activites" class="activities">
+<!-- ÉQUIPE -->
+<section id="equipe">
   <div class="wrap">
-    <p class="eyebrow">Nos activités</p>
-    <h2>Trois façons de faire de la musique ensemble</h2>
+    <p class="eyebrow">L'équipe</p>
+    <h2>Celles et ceux qui font tenir la compagnie</h2>
+    <p class="intro" style="font-weight:800; text-transform:uppercase; letter-spacing:.04em">Nous sommes :</p>
 
-    <div class="row" id="concerts">
-      <div>
-        <p class="tag">Scène</p>
-        <h3>Concerts</h3>
-      </div>
-      <div>
-        <p>La compagnie produit les concerts de Pablo Murgier : piano solo, trio, quartet, tango à danser, formes orchestrales. Elle emploie et rémunère les musicien·nes, assure la production et la diffusion des spectacles et édite les enregistrements.</p>
-        <p>Dates, projets, extraits et contact de booking sont réunis sur le site de l'artiste.</p>
-        <a class="btn" href="https://www.pablomurgier.com" target="_blank" rel="noopener">Voir les concerts sur pablomurgier.com</a>
-      </div>
+    <div class="group">
+      <h3>Direction artistique</h3>
+      <ul class="team">
+        <li><h4>Pablo Murgier Pazdera</h4><p class="role">Directeur artistique, pianiste et compositeur</p></li>
+      </ul>
     </div>
 
-    <div class="row" id="stages">
-      <div>
-        <p class="tag">Transmission</p>
-        <h3>Stages et ateliers</h3>
-      </div>
-      <div>
-        <p>Deux formats de transmission, animés par Pablo Murgier Pazdera :</p>
-        <ul>
-          <li><b>L'écoute émancipée</b> : un parcours d'écoute et de vulgarisation musicale, pour apprendre à entrer dans une œuvre du répertoire et s'en emparer, sans prérequis.</li>
-          <li><b>Workshops Tango Factory</b> : des journées de formation d'orchestre typique de tango, organisées par Pablo Murgier Pazdera et Carmela Delgado.</li>
-        </ul>
-        <p>Pour les dates, les lieux et les inscriptions :<br>
-        <a href="mailto:tangofactoryprojet@gmail.com"><b>tangofactoryprojet@gmail.com</b></a></p>
-      </div>
+    <div class="group">
+      <h3>Radio Mobile Paris — cofondation</h3>
+      <ul class="team">
+        <li><h4>Romain Lecuyer</h4><p class="role">Musicien et cofondateur de Radio Mobile Paris</p></li>
+        <li><h4>Claire Petavy</h4><p class="role">Infirmière et cofondatrice de Radio Mobile Paris</p></li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h3>Le bureau</h3>
+      <ul class="team">
+        <li><h4>Romain Bretaudeau</h4><p class="role">Président</p></li>
+        <li><h4>Xavier Duclos</h4><p class="role">Trésorier</p></li>
+        <li><h4>Jimena Ponce de León</h4><p class="role">Secrétaire et référente violences sexistes et sexuelles</p></li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h3>Financement, production et booking</h3>
+      <ul class="team">
+        <li><h4>Christèle Origlio</h4><p class="role">Chargée de recherche de financement</p></li>
+        <li><h4>Florencia Flores</h4><p class="role">Chargée de production</p></li>
+        <li><h4>Julia Thureau</h4><p class="role">Chargée de production</p></li>
+        <li><h4>Manuel Murgier</h4><p class="role">Chargé de booking</p></li>
+        <li><h4>Manuel Sorroche</h4><p class="role">Réalisateur vidéo de la compagnie</p></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -286,63 +279,111 @@
         <p class="eyebrow">Projet social et culturel</p>
         <h2>Radio Mobile Paris</h2>
         <p class="lede">Une webradio mobile pour faire de la musique et donner la parole, avec des personnes en situation de précarité.</p>
-        <p>Le studio va là où sont les gens. On y anime, on y chante, on y raconte : chaque émission est construite avec les personnes accueillies et avec les équipes qui les accompagnent. Radio Mobile Paris est soutenue par la Ville de Paris et menée avec des structures de terrain.</p>
+        <p>Le studio va là où sont les gens. On y anime, on y chante, on y raconte : chaque émission est construite avec les personnes accueillies et avec les équipes qui les accompagnent. Radio Mobile Paris est menée en partenariat avec la Ville de Paris et avec des structures de terrain.</p>
         <a class="btn" href="https://www.radiomobileparis.com" target="_blank" rel="noopener">Écouter la radio</a>
       </div>
-      <ul class="facts">
-        <li><b>Soutien</b>Ville de Paris</li>
-        <li><b>Partenaires de terrain</b>Samusocial de Paris · GHU Paris psychiatrie &amp; neurosciences</li>
-        <li><b>Rythme</b>24 émissions en 2025</li>
-        <li><b>En ligne</b>radiomobileparis.com</li>
-      </ul>
+      <div>
+        <img src="assets/photos/radio-mobile-paris.png" alt="Une émission de Radio Mobile Paris enregistrée dans la rue, auprès d'une personne sans-abri" loading="lazy" style="border-radius:.5rem; margin-bottom:1.25rem">
+        <ul class="facts">
+          <li><b>Partenaires</b>Ville de Paris · Samusocial de Paris · GHU Paris psychiatrie &amp; neurosciences</li>
+          <li><b>Rythme</b>24 émissions en 2025</li>
+          <li><b>En ligne</b>radiomobileparis.com</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ÉQUIPE -->
-<section id="equipe">
+<!-- STAGES -->
+<section id="stages" class="activities">
   <div class="wrap">
-    <p class="eyebrow">L'équipe</p>
-    <h2>Celles et ceux qui font tenir la compagnie</h2>
-    <p class="intro">Un bureau associatif et une équipe de professionnel·les, chacun·e avec sa manière de servir le même projet.</p>
-
-    <div class="group">
-      <h3>Le bureau</h3>
-      <div class="person">
-        <div><h4>Romain Bretaudeau</h4><p class="role">Président</p></div>
-        <p class="mot">« Mon rôle : que la compagnie tienne debout. Un cadre clair, des artistes déclarés et rémunérés, des projets qui durent. C'est à cette condition que la création peut exister sereinement. »</p>
-      </div>
-      <div class="person">
-        <div><h4>Xavier Duclos</h4><p class="role">Trésorier</p></div>
-        <p class="mot">« Une gestion rigoureuse et transparente, pour que chaque euro, public ou privé, serve la musique et les personnes qui la font. »</p>
-      </div>
-      <div class="person">
-        <div><h4>Jimena Ponce de León</h4><p class="role">Secrétaire et référente violences sexistes et sexuelles</p></div>
-        <p class="mot">« Veiller à ce que chacun·e se sente en sécurité et respecté·e dans nos projets, sur scène comme en coulisses. »</p>
+    <p class="eyebrow">Transmission</p>
+    <h2>Stages et ateliers</h2>
+    <div class="row" style="border-top:0; padding-top:0">
+      <div><img src="assets/photos/ecoute-emancipee.jpg" alt="Affiche de L'écoute émancipée" loading="lazy" style="border-radius:.5rem"></div>
+      <div>
+        <p>Trois formats de transmission, animés par Pablo Murgier Pazdera :</p>
+        <ul>
+          <li><b>L'écoute émancipée</b> : un parcours d'écoute et de vulgarisation musicale, pour apprendre à entrer dans une œuvre du répertoire et s'en emparer, sans prérequis.</li>
+          <li><b>Stage d'improvisation et composition d'arrangements</b> : un atelier pour développer l'improvisation et l'écriture d'arrangements, en groupe.</li>
+          <li><b>Workshops Tango Factory</b> : des journées de formation d'orchestre typique de tango, organisées par Pablo Murgier Pazdera et Carmela Delgado.</li>
+        </ul>
+        <p>Pour les dates, les lieux et les inscriptions :<br>
+        <a href="mailto:tangofactoryprojet@gmail.com"><b>tangofactoryprojet@gmail.com</b></a></p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="group">
-      <h3>Financement, production, booking et vidéo</h3>
-      <div class="person">
-        <div><h4>Christèle Origlio</h4><p class="role">Chargée de recherche de financement</p></div>
-        <p class="mot">« Trouver les soutiens qui permettent à un projet d'exister et de rester fidèle à ce qu'il veut dire. »</p>
+<!-- CONCERTS -->
+<section id="concerts" class="activities">
+  <div class="wrap">
+    <p class="eyebrow">Sur scène</p>
+    <h2>Concerts, tournées et cycles</h2>
+    <img src="assets/photos/concert-public-consulat.jpg" alt="Public assis autour du piano lors d'un concert au Consulat" loading="lazy" style="border-radius:.5rem; margin-bottom:1.75rem">
+    <div class="row" style="border-top:0; padding-top:0">
+      <div></div>
+      <div>
+        <p>La compagnie produit les concerts et tournées de Pablo Murgier Pazdera : piano solo, trio, quartet, formes solistes et orchestrales. Elle emploie et rémunère les musicien·nes, assure la production et la diffusion des spectacles et édite les enregistrements, des vidéos et des créations interdisciplinaires.</p>
+        <p>Sans lieu fixe, la compagnie produit « hors les murs » : au Consulat, à La Marbrerie, au Café de la Danse, au Studio de l'Ermitage, au New Morning et à l'étranger. C'est une démarche assumée, transversale à tous ses projets : habiter des lieux qui ne sont pas les siens, et y créer des moments d'intimité et de rencontre avec le public plutôt que de simples passages de salle en salle.</p>
+        <a class="btn" href="https://www.pablomurgier.com" target="_blank" rel="noopener">Voir les concerts sur pablomurgier.com</a>
+
+        <ul class="cycles">
+          <li>
+            <h4>La Cita</h4>
+            <p>Le cycle de musique argentine et sud-américaine le plus pérenne de la Ville de Paris : deux solistes se réunissent, jouent chacun·e une partie en solo, puis ensemble. Plus de 60 éditions et presque 100 solistes y sont passé·es.</p>
+          </li>
+          <li>
+            <h4>Sur le Fil</h4>
+            <p>Festival autour de la musique populaire argentine, produit au Caminito.</p>
+          </li>
+          <li>
+            <h4>La Liga del Tango</h4>
+            <p>Une édition à La Marbrerie (Montreuil), dans la même démarche de création de moments collectifs autour du tango.</p>
+          </li>
+        </ul>
       </div>
-      <div class="person">
-        <div><h4>Flor</h4><p class="role">Chargée de production</p></div>
-        <p class="mot">« Que tout soit prêt, du contrat au dernier accord de piano : je fais le lien entre l'idée et sa réalisation. »</p>
+    </div>
+  </div>
+</section>
+
+<!-- LE LABEL -->
+<section id="label" class="activities">
+  <div class="wrap">
+    <p class="eyebrow">Édition</p>
+    <h2>Le label</h2>
+    <p class="intro">La compagnie édite les enregistrements qu'elle produit, sous le nom ¿Por Qué No?, distribué par Absilone. Quatorze projets à ce jour, entre jazz, musiques du monde et tango contemporain.</p>
+    <ul class="label-grid">
+      <li><img src="assets/label/sirocco.jpg" alt="Pochette de Sirocco" loading="lazy"><span class="what">Sirocco</span><span class="who">Pablo Murgier</span><span class="y">Janvier 2026</span></li>
+      <li><img src="assets/label/les-brouillards.jpg" alt="Pochette de Les Brouillards" loading="lazy"><span class="what">Les Brouillards <span class="fmt">EP</span></span><span class="who">Pablo Murgier</span><span class="y">Février 2023</span></li>
+      <li><img src="assets/label/azimut-no-tags.jpg" alt="Pochette de No Tags" loading="lazy"><span class="what">No Tags</span><span class="who">Azimut</span><span class="y">Décembre 2022</span></li>
+      <li><img src="assets/label/evidencia.jpg" alt="Pochette de Evidencia" loading="lazy"><span class="what">Evidencia</span><span class="who">Pablo Murgier &amp; Ana Karina Rossi</span><span class="y">Juillet 2022</span></li>
+      <li><img src="assets/label/gare-du-sud.jpg" alt="Pochette de Gare du Sud" loading="lazy"><span class="what">Gare du Sud</span><span class="who">Pablo Murgier Quartet</span><span class="y">Avril 2022</span></li>
+      <li><img src="assets/label/tiempo-interrumpido.jpg" alt="Pochette de Tiempo Interrumpido" loading="lazy"><span class="what">Tiempo Interrumpido</span><span class="who">Pablo Murgier, Alex Musatov &amp; Federico Biraben</span><span class="y">Mai 2020</span></li>
+      <li><img src="assets/label/auricula.jpg" alt="Pochette de Aurícula" loading="lazy"><span class="what">Aurícula</span><span class="who">Federico Biraben</span><span class="y">Mai 2020</span></li>
+      <li><img src="assets/label/azimut-new-york.jpg" alt="Pochette de New York" loading="lazy"><span class="what">New York <span class="fmt">EP</span></span><span class="who">Azimut</span><span class="y">Avril 2020</span></li>
+      <li><img src="assets/label/reflets.jpg" alt="Pochette de Reflets" loading="lazy"><span class="what">Reflets <span class="fmt">EP</span></span><span class="who">Ensemble Murgier</span><span class="y">Avril 2020</span></li>
+      <li><img src="assets/label/voyage.jpg" alt="Pochette de Voyage" loading="lazy"><span class="what">Voyage</span><span class="who">Hugo Fattoruso &amp; Ana Karina Rossi</span><span class="y">Février 2020</span></li>
+      <li><img src="assets/label/los-espejos.jpg" alt="Pochette de Los Espejos" loading="lazy"><span class="what">Los Espejos</span><span class="who">Pablo Murgier</span><span class="y">Décembre 2019</span></li>
+      <li><img src="assets/label/azimut-paris.jpg" alt="Pochette de Paris" loading="lazy"><span class="what">Paris <span class="fmt">EP</span></span><span class="who">Azimut</span><span class="y">2019</span></li>
+      <li><img src="assets/label/rosa-y-negro.jpg" alt="Pochette de Rosa y Negro" loading="lazy"><span class="what">Rosa y Negro</span><span class="who">Los Milonguitas</span><span class="y">Mars 2019</span></li>
+      <li><img src="assets/label/muy-lejos.jpg" alt="Pochette de Muy Lejos" loading="lazy"><span class="what">Muy Lejos</span><span class="who">Pablo Murgier</span><span class="y">Février 2017</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAIRE UN DON -->
+<section id="don" class="don">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <p class="eyebrow">Soutenez-nous</p>
+        <h2>Faire un don</h2>
+        <p class="intro">Soutenez nos créations et nos activités.</p>
       </div>
-      <div class="person">
-        <div><h4>Manuel Murgier</h4><p class="role">Chargé de booking</p></div>
-        <p class="mot">« Faire entendre la musique de la compagnie dans des salles et des festivals qui lui ressemblent. »</p>
-      </div>
-      <div class="person">
-        <div><h4>Julia Thurau</h4><p class="role">Chargée de booking</p></div>
-        <p class="mot">« Ouvrir de nouvelles scènes, en France et en Europe, et bâtir des collaborations durables. »</p>
-      </div>
-      <div class="person">
-        <div><h4>Manuel Sorroche</h4><p class="role">Réalisateur vidéo de la compagnie</p></div>
-        <p class="mot">« Filmer la musique là où elle se fait, pour qu'elle voyage plus loin que la salle. »</p>
+      <div>
+        <!-- TEMPORAIRE : pas de campagne HelloAsso trouvée/fournie -> mailto en attendant. Remplacer par le vrai lien HelloAsso dès qu'il existe. -->
+        <a class="btn" href="mailto:asso.cpqn@gmail.com?subject=Faire%20un%20don%20%C3%A0%20la%20compagnie">Faire un don</a>
       </div>
     </div>
   </div>
@@ -397,18 +438,21 @@
   <div class="wrap">
     <p class="eyebrow">Collaborations</p>
     <ul class="logos">
+      <li><img src="assets/partners/la-lune-dans-les-yeux.svg" alt="Cie La Lune dans les yeux" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>Cie La Lune dans les yeux</span></li>
       <li><img src="assets/partners/ville-de-paris.svg" alt="Ville de Paris" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>Ville de Paris</span></li>
       <li><img src="assets/partners/samusocial-paris.svg" alt="Samusocial de Paris" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>Samusocial de Paris</span></li>
-      <li><img src="assets/partners/ghu-paris.png" alt="GHU Paris psychiatrie &amp; neurosciences" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>GHU Paris psychiatrie &amp; neurosciences</span></li>
+      <li><img src="assets/partners/la-magma.png" alt="Collectif Minuit 12" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>Collectif Minuit 12</span></li>
+      <li><img src="assets/partners/l-oeil-du-baobab.png" alt="L'Œil du Baobab" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>L'Œil du Baobab</span></li>
+      <li><img src="assets/partners/absilone.png" alt="Absilone" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>Absilone</span></li>
       <li><img src="assets/partners/spedidam.png" alt="SPEDIDAM" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>SPEDIDAM</span></li>
       <li><img src="assets/partners/adami.png" alt="ADAMI" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>ADAMI</span></li>
-      <li><img src="assets/partners/fen-music.svg" alt="FEN Music" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>FEN Music</span></li>
-      <li><img src="assets/partners/la-lune-dans-les-yeux.svg" alt="La Lune dans les yeux" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>La Lune dans les yeux</span></li>
-      <li><img src="assets/partners/l-entente-cordiale.png" alt="L'Entente Cordiale" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>L'Entente Cordiale</span></li>
-      <li><img src="assets/partners/la-magma.png" alt="La Magma (Collectif Minuit 12)" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>La Magma (Collectif Minuit 12)</span></li>
-      <li><img src="assets/partners/l-oeil-du-baobab.png" alt="L'Œil du Baobab" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>L'Œil du Baobab</span></li>
-      <li><img src="assets/partners/la-mira.png" alt="La Mira Compagnie" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>La Mira Compagnie</span></li>
+      <li><img src="assets/partners/cnm.svg" alt="Centre national de la musique" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>CNM</span></li>
+      <li><img src="assets/partners/sacem.png" alt="SACEM" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>SACEM</span></li>
       <li><img src="assets/partners/fonica.png" alt="Fonica" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>Fonica</span></li>
+      <li><img src="assets/partners/couleurs-jazz.svg" alt="Couleurs Jazz" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>Couleurs Jazz</span></li>
+      <li><img src="assets/partners/la-salida.gif" alt="La Salida Magazine" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>La Salida Magazine</span></li>
+      <li><img src="assets/partners/fen-music.svg" alt="FEN — Fascination Education Network" loading="lazy" onerror="this.parentNode.classList.add('nologo')"><span>FEN</span></li>
+      <!-- COMPLÉTER : 2e structure de Julia Thureau (Pablo n'a donné que FEN pour l'instant) -->
     </ul>
   </div>
 </section>
@@ -424,9 +468,9 @@
       <div>Association loi 1901 · RNA W442015940</div>
       <div>SIREN 843 345 836 · Code APE 9001Z</div>
       <div>Licence d'entrepreneur du spectacle : 2-1119236</div>
-      <div>Siège social : 26 rue Lebour, 93100 Montreuil</div>
+      <div>Siège social : Montreuil (93)</div>
       <div>Directeur de la publication : Romain Bretaudeau, président</div>
-      <div>Hébergeur : <!-- À COMPLÉTER selon la plateforme retenue (Wix : Wix.com Ltd.) -->à compléter</div>
+      <div>Hébergeur : GitHub Pages (GitHub, Inc.)</div>
     </div>
     <p>© <span id="y">2026</span> Compagnie ¿Por Qué No? · Association Collectif ¿Por qué no?</p>
   </div>
